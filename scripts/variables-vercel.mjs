@@ -25,5 +25,7 @@ for (const n of PARA_VERCEL) {
   if (v) lineas.push(`${n}=${v}`);
   console.log(`${v ? "va   " : "vacía"}  ${n}`);
 }
-fs.writeFileSync(".env.vercel", lineas.join("\n") + "\n");
+// Solo lectura y escritura para el dueño (lleva claves); si ya existía, se borra antes para no heredar sus permisos.
+fs.rmSync(".env.vercel", { force: true });
+fs.writeFileSync(".env.vercel", lineas.join("\n") + "\n", { mode: 0o600, flag: "wx" });
 console.log("\nListo: .env.vercel (no se sube a git ni a Vercel). Borralo después de cargarlo.");
