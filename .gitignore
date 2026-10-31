@@ -1,0 +1,27 @@
+# claves (solo .env.example va al repo)
+.env*
+!.env.example
+
+# dependencias, compilados y reportes
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+next-env.d.ts
+*.log
+
+# Vercel
+.vercel/
+blob-report/
+lighthouse/*.html
+
+# datos del modo local (CRM, Slack y registro sin cuentas)
+data/dev/
+data/eval/cache/
+# credenciales del usuario de demo del panel (scripts/crear-admin-demo.ts)
+data/admin-demo.json
+# worker de pdf.js copiado de node_modules (scripts/copiar-worker-pdf.mjs)
+public/pdf.worker.min.mjs

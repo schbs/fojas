@@ -1,0 +1,1752 @@
+{
+  "fecha": "2026-10-31T18:25:35.483Z",
+  "almacen": "Supabase",
+  "modelo": "gemini-3.5-flash-lite (con caché)",
+  "prompt": "v1",
+  "config": {},
+  "conCache": false,
+  "tabla": [
+    [
+      "Exactitud de cita (documento + página), 20 respondibles",
+      "20/20 = 100 %",
+      "≥ 85 %"
+    ],
+    [
+      "\"No sé\" correcto, 10 no respondibles",
+      "10/10 = 100 %",
+      "≥ 90 %"
+    ],
+    [
+      "Alucinaciones (respuesta sin cita válida)",
+      "0",
+      "0"
+    ],
+    [
+      "No respondibles que se respondieron igual",
+      "0",
+      "—"
+    ],
+    [
+      "Respondibles con \"no sé\"",
+      "0",
+      "—"
+    ],
+    [
+      "Citas del modelo descartadas por el validador",
+      "0",
+      "—"
+    ],
+    [
+      "Latencia p50 / p95",
+      "1.7 s / 2.5 s",
+      "—"
+    ],
+    [
+      "Costo estimado por pregunta (plan pago)",
+      "USD 0.00032",
+      "—"
+    ]
+  ],
+  "filas": [
+    {
+      "id": "R01",
+      "pregunta": "¿Hasta qué día del mes tengo que mandar los comprobantes del mes anterior?",
+      "respondible": true,
+      "respuesta": "Tenés tiempo hasta el día 5 de cada mes para mandar los comprobantes del mes anterior. Recordá cargarlos en la carpeta compartida.",
+      "citas": [
+        {
+          "doc": "01-calendario-vencimientos-internos",
+          "titulo": "Calendario de vencimientos internos",
+          "pagina": 1,
+          "fragmento": "El estudio recibe los comprobantes de ventas y compras del mes anterior hasta el día 5 de cada mes."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.798755490928239,
+        "contexto": [
+          {
+            "doc": "01-calendario-vencimientos-internos",
+            "pagina": 1,
+            "seccion": "Recepción mensual de comprobantes",
+            "similitud": 0.798755490928239,
+            "puntaje": 0.8787554909282391
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 1,
+            "seccion": "Qué cargar todos los meses",
+            "similitud": 0.768579006195068,
+            "puntaje": 0.828579006195068
+          },
+          {
+            "doc": "01-calendario-vencimientos-internos",
+            "pagina": 2,
+            "seccion": "Recordatorios automáticos",
+            "similitud": 0.729716972725573,
+            "puntaje": 0.7897169727255731
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 1,
+            "seccion": "¿Puedo mandar los comprobantes por WhatsApp?",
+            "similitud": 0.742299936482309,
+            "puntaje": 0.782299936482309
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 697,
+          "salida": 112
+        },
+        "llamoAlModelo": true,
+        "ms": 1931
+      },
+      "costo": 0.00049195
+    },
+    {
+      "id": "R02",
+      "pregunta": "¿Qué se considera un pedido urgente?",
+      "respondible": true,
+      "respuesta": "Un pedido urgente es cualquier trámite que necesitás en menos de 3 días hábiles. Recordá que estos pedidos tienen un recargo del 20 % sobre el honorario del trámite y se atienden por orden de llegada.",
+      "citas": [
+        {
+          "doc": "01-calendario-vencimientos-internos",
+          "titulo": "Calendario de vencimientos internos",
+          "pagina": 2,
+          "fragmento": "Un pedido urgente es cualquier trámite que el cliente necesita en menos de 3 días hábiles."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.769032822193673,
+        "contexto": [
+          {
+            "doc": "01-calendario-vencimientos-internos",
+            "pagina": 2,
+            "seccion": "Pedidos urgentes",
+            "similitud": 0.769032822193673,
+            "puntaje": 0.8356994888603396
+          },
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 1,
+            "seccion": "Tiempos de respuesta",
+            "similitud": 0.731610774993896,
+            "puntaje": 0.7982774416605627
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 1,
+            "seccion": "¿Qué pasa si me olvido de cargar algo?",
+            "similitud": 0.667724211947668,
+            "puntaje": 0.667724211947668
+          },
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 2,
+            "seccion": "Pedidos del cliente",
+            "similitud": 0.625639319419861,
+            "puntaje": 0.6589726527531943
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 605,
+          "salida": 129
+        },
+        "llamoAlModelo": true,
+        "ms": 1912
+      },
+      "costo": 0.00050535
+    },
+    {
+      "id": "R03",
+      "pregunta": "¿El estudio trabaja en la primera quincena de enero?",
+      "respondible": true,
+      "respuesta": "Hola. Durante la primera quincena de enero, del 2 al 15, el estudio atiende solamente trámites urgentes.",
+      "citas": [
+        {
+          "doc": "01-calendario-vencimientos-internos",
+          "titulo": "Calendario de vencimientos internos",
+          "pagina": 3,
+          "fragmento": "Durante el receso de verano, del 2 al 15 de enero, el estudio atiende solo trámites urgentes."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.74332457780838,
+        "contexto": [
+          {
+            "doc": "01-calendario-vencimientos-internos",
+            "pagina": 3,
+            "seccion": "Receso de verano",
+            "similitud": 0.740044951438904,
+            "puntaje": 0.7800449514389041
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 2,
+            "seccion": "¿Atienden los sábados?",
+            "similitud": 0.74332457780838,
+            "puntaje": 0.76332457780838
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Horario de atención",
+            "similitud": 0.704071700572968,
+            "puntaje": 0.724071700572968
+          },
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 1,
+            "seccion": "Tiempos de respuesta",
+            "similitud": 0.689127564430237,
+            "puntaje": 0.7091275644302371
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 553,
+          "salida": 116
+        },
+        "llamoAlModelo": true,
+        "ms": 1727
+      },
+      "costo": 0.00045785
+    },
+    {
+      "id": "R04",
+      "pregunta": "¿Cuánto dura la primera reunión para darme de alta y tiene costo?",
+      "respondible": true,
+      "respuesta": "La primera reunión para darte de alta dura 45 minutos y no tiene costo.",
+      "citas": [
+        {
+          "doc": "02-checklist-alta-cliente",
+          "titulo": "Checklist de alta de cliente",
+          "pagina": 1,
+          "fragmento": "Toda alta empieza con una reunión de 45 minutos, presencial o por videollamada, sin costo."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.789359235446439,
+        "contexto": [
+          {
+            "doc": "02-checklist-alta-cliente",
+            "pagina": 1,
+            "seccion": "Primera reunión",
+            "similitud": 0.789359235446439,
+            "puntaje": 0.8393592354464391
+          },
+          {
+            "doc": "02-checklist-alta-cliente",
+            "pagina": 2,
+            "seccion": "Plazo del alta",
+            "similitud": 0.701702946119975,
+            "puntaje": 0.726702946119975
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 2,
+            "seccion": "Cancelaciones",
+            "similitud": 0.683256566524511,
+            "puntaje": 0.695756566524511
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Cómo pedir un turno",
+            "similitud": 0.67824045782565,
+            "puntaje": 0.69074045782565
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 576,
+          "salida": 103
+        },
+        "llamoAlModelo": true,
+        "ms": 1659
+      },
+      "costo": 0.0004328499999999999
+    },
+    {
+      "id": "R05",
+      "pregunta": "¿En cuántos días hábiles queda completa el alta como cliente?",
+      "respondible": true,
+      "respuesta": "¡Hola! El alta como cliente queda completa en 5 días hábiles desde que el estudio recibe toda la documentación inicial y la carta firmada.",
+      "citas": [
+        {
+          "doc": "02-checklist-alta-cliente",
+          "titulo": "Checklist de alta de cliente",
+          "pagina": 2,
+          "fragmento": "El alta queda completa en 5 días hábiles desde que el estudio recibe toda la documentación inicial y la carta firmada."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.772076931944265,
+        "contexto": [
+          {
+            "doc": "02-checklist-alta-cliente",
+            "pagina": 2,
+            "seccion": "Plazo del alta",
+            "similitud": 0.772076931944265,
+            "puntaje": 0.8435055033728364
+          },
+          {
+            "doc": "11-guia-empleadores",
+            "pagina": 2,
+            "seccion": "Altas de empleados",
+            "similitud": 0.671447416289074,
+            "puntaje": 0.7143045591462168
+          },
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 2,
+            "seccion": "Pedidos del cliente",
+            "similitud": 0.666591882705688,
+            "puntaje": 0.7094490255628308
+          },
+          {
+            "doc": "02-checklist-alta-cliente",
+            "pagina": 2,
+            "seccion": "Carpeta compartida",
+            "similitud": 0.664709011947039,
+            "puntaje": 0.7075661548041818
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 555,
+          "salida": 91
+        },
+        "llamoAlModelo": true,
+        "ms": 1827
+      },
+      "costo": 0.0003964
+    },
+    {
+      "id": "R06",
+      "pregunta": "¿Cada cuánto actualizan los honorarios?",
+      "respondible": true,
+      "respuesta": "Los honorarios se actualizan cada cuatro meses, específicamente en los meses de marzo, julio y noviembre.",
+      "citas": [
+        {
+          "doc": "03-honorarios",
+          "titulo": "Circular de honorarios 2026",
+          "pagina": 2,
+          "fragmento": "Los honorarios se actualizan cada 4 meses (en marzo, julio y noviembre)."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.818858553103124,
+        "contexto": [
+          {
+            "doc": "03-honorarios",
+            "pagina": 2,
+            "seccion": "Actualización",
+            "similitud": 0.818858553103124,
+            "puntaje": 0.8855252197697907
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 3,
+            "seccion": "¿Puedo pedir una factura del honorario?",
+            "similitud": 0.718584017838001,
+            "puntaje": 0.7519173511713343
+          },
+          {
+            "doc": "07-circular-cierre-anual",
+            "pagina": 2,
+            "seccion": "Honorario del cierre",
+            "similitud": 0.71132481098175,
+            "puntaje": 0.7446581443150834
+          },
+          {
+            "doc": "03-honorarios",
+            "pagina": 2,
+            "seccion": "Forma de pago",
+            "similitud": 0.707320374686742,
+            "puntaje": 0.7406537080200754
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 533,
+          "salida": 99
+        },
+        "llamoAlModelo": true,
+        "ms": 2391
+      },
+      "costo": 0.00040889999999999996
+    },
+    {
+      "id": "R07",
+      "pregunta": "¿Qué pasa si pago el honorario después del día 10?",
+      "respondible": true,
+      "respuesta": "Hola. Si abonás el honorario después del día 10, se te va a aplicar un interés del 3 % mensual.",
+      "citas": [
+        {
+          "doc": "03-honorarios",
+          "titulo": "Circular de honorarios 2026",
+          "pagina": 2,
+          "fragmento": "Después del día 10 se aplica un interés del 3 % mensual."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.752986565054265,
+        "contexto": [
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 1,
+            "seccion": "¿Qué pasa si me olvido de cargar algo?",
+            "similitud": 0.752986565054265,
+            "puntaje": 0.827986565054265
+          },
+          {
+            "doc": "03-honorarios",
+            "pagina": 2,
+            "seccion": "Forma de pago",
+            "similitud": 0.710276169197332,
+            "puntaje": 0.810276169197332
+          },
+          {
+            "doc": "01-calendario-vencimientos-internos",
+            "pagina": 2,
+            "seccion": "Pedidos urgentes",
+            "similitud": 0.678225319279751,
+            "puntaje": 0.7282253192797511
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 3,
+            "seccion": "¿Puedo pedir una factura del honorario?",
+            "similitud": 0.678154547324507,
+            "puntaje": 0.728154547324507
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 622,
+          "salida": 104
+        },
+        "llamoAlModelo": true,
+        "ms": 1763
+      },
+      "costo": 0.00044855000000000003
+    },
+    {
+      "id": "R08",
+      "pregunta": "¿Cuánto cuesta una certificación de ingresos?",
+      "respondible": true,
+      "respuesta": "Hola. El costo de la certificación de ingresos es de ARS 52.000, según nuestros valores de referencia.",
+      "citas": [
+        {
+          "doc": "03-honorarios",
+          "titulo": "Circular de honorarios 2026",
+          "pagina": 2,
+          "fragmento": "Certificación de ingresos: ARS 52.000."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.74170143083049,
+        "contexto": [
+          {
+            "doc": "03-honorarios",
+            "pagina": 2,
+            "seccion": "Trámites fuera del plan",
+            "similitud": 0.74170143083049,
+            "puntaje": 0.79170143083049
+          },
+          {
+            "doc": "07-circular-cierre-anual",
+            "pagina": 1,
+            "seccion": "A quién va dirigida",
+            "similitud": 0.641993680119139,
+            "puntaje": 0.6669936801191391
+          },
+          {
+            "doc": "03-honorarios",
+            "pagina": 1,
+            "seccion": "Valores de referencia",
+            "similitud": 0.66529188545298,
+            "puntaje": 0.66529188545298
+          },
+          {
+            "doc": "11-guia-empleadores",
+            "pagina": 2,
+            "seccion": "Honorario",
+            "similitud": 0.661515295505524,
+            "puntaje": 0.661515295505524
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 557,
+          "salida": 102
+        },
+        "llamoAlModelo": true,
+        "ms": 2364
+      },
+      "costo": 0.0004239
+    },
+    {
+      "id": "R09",
+      "pregunta": "¿Con cuánta anticipación puedo cancelar un turno sin costo?",
+      "respondible": true,
+      "respuesta": "Podés cancelar o cambiar tu turno sin costo hasta 24 horas antes.",
+      "citas": [
+        {
+          "doc": "04-politica-turnos",
+          "titulo": "Política de turnos y atención",
+          "pagina": 2,
+          "fragmento": "Un turno se puede cancelar o cambiar sin costo hasta 24 horas antes."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.795005249679403,
+        "contexto": [
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 2,
+            "seccion": "Cancelaciones",
+            "similitud": 0.795005249679403,
+            "puntaje": 0.855005249679403
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 2,
+            "seccion": "Llegadas tarde",
+            "similitud": 0.692549487726375,
+            "puntaje": 0.712549487726375
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Turnos por videollamada",
+            "similitud": 0.683579008792581,
+            "puntaje": 0.7035790087925811
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 3,
+            "seccion": "Cuándo conviene pedir un turno",
+            "similitud": 0.672954559326172,
+            "puntaje": 0.692954559326172
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 509,
+          "salida": 68
+        },
+        "llamoAlModelo": true,
+        "ms": 1572
+      },
+      "costo": 0.00032494999999999996
+    },
+    {
+      "id": "R10",
+      "pregunta": "Si llego 20 minutos tarde a un turno presencial, ¿qué pasa?",
+      "respondible": true,
+      "respuesta": "Si llegás más de 15 minutos tarde a tu turno presencial, el turno se reprograma.",
+      "citas": [
+        {
+          "doc": "04-politica-turnos",
+          "titulo": "Política de turnos y atención",
+          "pagina": 2,
+          "fragmento": "Si el cliente llega más de 15 minutos tarde a un turno presencial, el turno se reprograma."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.807398545080562,
+        "contexto": [
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 2,
+            "seccion": "Llegadas tarde",
+            "similitud": 0.807398545080562,
+            "puntaje": 0.8873985450805619
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 2,
+            "seccion": "Cancelaciones",
+            "similitud": 0.727035061893769,
+            "puntaje": 0.747035061893769
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Turnos por videollamada",
+            "similitud": 0.726010100483304,
+            "puntaje": 0.7460101004833041
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Cómo pedir un turno",
+            "similitud": 0.701358196017911,
+            "puntaje": 0.7413581960179111
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 542,
+          "salida": 106
+        },
+        "llamoAlModelo": true,
+        "ms": 1755
+      },
+      "costo": 0.00042985
+    },
+    {
+      "id": "R11",
+      "pregunta": "¿En qué meses revisan la categoría de monotributo?",
+      "respondible": true,
+      "respuesta": "Hola. Desde el estudio revisamos tu categoría de monotributo dos veces al año, específicamente en los meses de enero y de julio.",
+      "citas": [
+        {
+          "doc": "05-guia-monotributistas",
+          "titulo": "Guía de documentación para monotributistas",
+          "pagina": 2,
+          "fragmento": "El estudio revisa la categoría de cada monotributista dos veces por año, en enero y en julio."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.823275376753533,
+        "contexto": [
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 2,
+            "seccion": "Recategorización",
+            "similitud": 0.823275376753533,
+            "puntaje": 0.898275376753533
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 2,
+            "seccion": "Control de ingresos",
+            "similitud": 0.714760303497314,
+            "puntaje": 0.764760303497314
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 3,
+            "seccion": "Cuándo conviene pedir un turno",
+            "similitud": 0.69597202539444,
+            "puntaje": 0.72097202539444
+          },
+          {
+            "doc": "03-honorarios",
+            "pagina": 2,
+            "seccion": "Actualización",
+            "similitud": 0.664221922410842,
+            "puntaje": 0.689221922410842
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 575,
+          "salida": 110
+        },
+        "llamoAlModelo": true,
+        "ms": 1737
+      },
+      "costo": 0.00044945
+    },
+    {
+      "id": "R12",
+      "pregunta": "¿Puedo mandar las facturas por WhatsApp?",
+      "respondible": true,
+      "respuesta": "No, no podés mandar los comprobantes por WhatsApp ya que ese canal es solo para avisos y la documentación va siempre a la carpeta compartida.",
+      "citas": [
+        {
+          "doc": "06-preguntas-frecuentes",
+          "titulo": "Preguntas frecuentes de clientes",
+          "pagina": 1,
+          "fragmento": "No. Los comprobantes van siempre a la carpeta compartida."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.77402363860748,
+        "contexto": [
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 1,
+            "seccion": "¿Puedo mandar los comprobantes por WhatsApp?",
+            "similitud": 0.77402363860748,
+            "puntaje": 0.8406903052741467
+          },
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 2,
+            "seccion": "WhatsApp",
+            "similitud": 0.712474963440745,
+            "puntaje": 0.7791416301074117
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 1,
+            "seccion": "Qué cargar todos los meses",
+            "similitud": 0.663821240181364,
+            "puntaje": 0.6971545735146973
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 3,
+            "seccion": "¿Puedo pedir una factura del honorario?",
+            "similitud": 0.656699995496872,
+            "puntaje": 0.6900333288302053
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 575,
+          "salida": 104
+        },
+        "llamoAlModelo": true,
+        "ms": 2490
+      },
+      "costo": 0.000434
+    },
+    {
+      "id": "R13",
+      "pregunta": "¿Cómo le doy acceso al estudio sin pasarle mi clave fiscal?",
+      "respondible": true,
+      "respuesta": "Para darle acceso al estudio sin pasarle tu contraseña, tenés que realizar una delegación de acceso. El estudio te manda un instructivo paso a paso en la reunión de alta.",
+      "citas": [
+        {
+          "doc": "06-preguntas-frecuentes",
+          "titulo": "Preguntas frecuentes de clientes",
+          "pagina": 1,
+          "fragmento": "Con una delegación de acceso. El estudio manda un instructivo paso a paso en la reunión de alta."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.805442142810951,
+        "contexto": [
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 1,
+            "seccion": "¿Cómo le doy acceso al estudio sin pasar mi contraseña?",
+            "similitud": 0.805442142810951,
+            "puntaje": 0.855442142810951
+          },
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 1,
+            "seccion": "Qué datos guarda el estudio",
+            "similitud": 0.743895411491394,
+            "puntaje": 0.7772287448247274
+          },
+          {
+            "doc": "02-checklist-alta-cliente",
+            "pagina": 2,
+            "seccion": "Carpeta compartida",
+            "similitud": 0.721434209175805,
+            "puntaje": 0.7547675425091384
+          },
+          {
+            "doc": "09-guia-sociedades",
+            "pagina": 2,
+            "seccion": "Cuenta bancaria",
+            "similitud": 0.713323375979763,
+            "puntaje": 0.7466567093130964
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 551,
+          "salida": 119
+        },
+        "llamoAlModelo": true,
+        "ms": 2576
+      },
+      "costo": 0.00046504999999999995
+    },
+    {
+      "id": "R14",
+      "pregunta": "¿Dónde queda la oficina del estudio?",
+      "respondible": true,
+      "respuesta": "La oficina del estudio queda en calle Los Aromos 455, primer piso, oficina B.",
+      "citas": [
+        {
+          "doc": "06-preguntas-frecuentes",
+          "titulo": "Preguntas frecuentes de clientes",
+          "pagina": 3,
+          "fragmento": "En calle Los Aromos 455, primer piso, oficina B (dirección ficticia)."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.791773414856991,
+        "contexto": [
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 3,
+            "seccion": "¿Dónde está el estudio?",
+            "similitud": 0.791773414856991,
+            "puntaje": 0.8584400815236577
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 2,
+            "seccion": "¿Atienden los sábados?",
+            "similitud": 0.765789641988896,
+            "puntaje": 0.7991229753222293
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Horario de atención",
+            "similitud": 0.721266465111587,
+            "puntaje": 0.7545997984449203
+          },
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 2,
+            "seccion": "Llamadas",
+            "similitud": 0.713162217955325,
+            "puntaje": 0.7464955512886583
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 509,
+          "salida": 102
+        },
+        "llamoAlModelo": true,
+        "ms": 2350
+      },
+      "costo": 0.00040905
+    },
+    {
+      "id": "R15",
+      "pregunta": "¿Cuánto se cobra el cierre anual?",
+      "respondible": true,
+      "respuesta": "El cierre anual se cotiza aparte del plan mensual y, como referencia, equivale a dos honorarios mensuales de tu plan. El presupuesto exacto se te envía junto con el borrador.",
+      "citas": [
+        {
+          "doc": "07-circular-cierre-anual",
+          "titulo": "Circular de cierre anual",
+          "pagina": 2,
+          "fragmento": "El cierre anual se cotiza aparte del plan mensual. Como referencia, equivale a dos honorarios mensuales del plan del cliente. El presupuesto exacto se manda con el borrador."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.802542376669788,
+        "contexto": [
+          {
+            "doc": "07-circular-cierre-anual",
+            "pagina": 2,
+            "seccion": "Honorario del cierre",
+            "similitud": 0.802542376669788,
+            "puntaje": 0.852542376669788
+          },
+          {
+            "doc": "07-circular-cierre-anual",
+            "pagina": 1,
+            "seccion": "A quién va dirigida",
+            "similitud": 0.735646812396862,
+            "puntaje": 0.810646812396862
+          },
+          {
+            "doc": "01-calendario-vencimientos-internos",
+            "pagina": 3,
+            "seccion": "Cierre de ejercicio",
+            "similitud": 0.715262936839899,
+            "puntaje": 0.7652629368398991
+          },
+          {
+            "doc": "07-circular-cierre-anual",
+            "pagina": 1,
+            "seccion": "Documentación que se pide",
+            "similitud": 0.678607265866237,
+            "puntaje": 0.703607265866237
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 576,
+          "salida": 134
+        },
+        "llamoAlModelo": true,
+        "ms": 1643
+      },
+      "costo": 0.00050915
+    },
+    {
+      "id": "R16",
+      "pregunta": "¿En cuánto tiempo contestan los correos?",
+      "respondible": true,
+      "respuesta": "Hola. El estudio responde los correos dentro de las 48 horas hábiles, mientras que los pedidos marcados como “URGENTE” se responden en el día si llegan antes de las 13 h.",
+      "citas": [
+        {
+          "doc": "08-canales-de-comunicacion",
+          "titulo": "Política de canales de comunicación",
+          "pagina": 1,
+          "fragmento": "El estudio responde los correos dentro de las 48 horas hábiles. Los pedidos marcados como “URGENTE” se responden en el día si llegan antes de las 13 h."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.777129067353663,
+        "contexto": [
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 1,
+            "seccion": "Tiempos de respuesta",
+            "similitud": 0.777129067353663,
+            "puntaje": 0.8271290673536631
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Cómo pedir un turno",
+            "similitud": 0.675815204506662,
+            "puntaje": 0.725815204506662
+          },
+          {
+            "doc": "01-calendario-vencimientos-internos",
+            "pagina": 2,
+            "seccion": "Recordatorios automáticos",
+            "similitud": 0.678951301699722,
+            "puntaje": 0.703951301699722
+          },
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 1,
+            "seccion": "Casillas de correo",
+            "similitud": 0.678900776105982,
+            "puntaje": 0.703900776105982
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 631,
+          "salida": 146
+        },
+        "llamoAlModelo": true,
+        "ms": 1747
+      },
+      "costo": 0.0005558
+    },
+    {
+      "id": "R17",
+      "pregunta": "¿En qué horario atienden las llamadas?",
+      "respondible": true,
+      "respuesta": "Las llamadas se atienden de 10 a 13 h. Tené en cuenta que para consultas que llevan más de 5 minutos, el estudio te propone un turno.",
+      "citas": [
+        {
+          "doc": "08-canales-de-comunicacion",
+          "titulo": "Política de canales de comunicación",
+          "pagina": 2,
+          "fragmento": "Llamadas se atienden de 10 a 13 h. Para consultas que llevan más de 5 minutos, el estudio propone un turno."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.781826257705694,
+        "contexto": [
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 2,
+            "seccion": "Llamadas",
+            "similitud": 0.781826257705694,
+            "puntaje": 0.8484929243723607
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Horario de atención",
+            "similitud": 0.761456296530743,
+            "puntaje": 0.8281229631974096
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 2,
+            "seccion": "¿Atienden los sábados?",
+            "similitud": 0.762203858030074,
+            "puntaje": 0.7955371913634073
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 2,
+            "seccion": "Quién atiende",
+            "similitud": 0.694370824434123,
+            "puntaje": 0.7277041577674563
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 531,
+          "salida": 129
+        },
+        "llamoAlModelo": true,
+        "ms": 2390
+      },
+      "costo": 0.00048329999999999993
+    },
+    {
+      "id": "R18",
+      "pregunta": "¿Cuántos años guardan mi documentación?",
+      "respondible": true,
+      "respuesta": "La documentación se guarda durante 10 años a partir del último ejercicio trabajado, a menos que nos pidas conservarla por más tiempo.",
+      "citas": [
+        {
+          "doc": "10-confidencialidad-datos",
+          "titulo": "Política de confidencialidad y datos",
+          "pagina": 2,
+          "fragmento": "La documentación se guarda 10 años desde el último ejercicio trabajado."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.809958958922594,
+        "contexto": [
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 2,
+            "seccion": "Cuánto tiempo se guardan",
+            "similitud": 0.809958958922594,
+            "puntaje": 0.9099589589225939
+          },
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 1,
+            "seccion": "Qué datos guarda el estudio",
+            "similitud": 0.72338547478275,
+            "puntaje": 0.74838547478275
+          },
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 1,
+            "seccion": "Dónde se guardan",
+            "similitud": 0.720313451299473,
+            "puntaje": 0.745313451299473
+          },
+          {
+            "doc": "07-circular-cierre-anual",
+            "pagina": 1,
+            "seccion": "Documentación que se pide",
+            "similitud": 0.686878880467382,
+            "puntaje": 0.736878880467382
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 579,
+          "salida": 102
+        },
+        "llamoAlModelo": true,
+        "ms": 1908
+      },
+      "costo": 0.0004302
+    },
+    {
+      "id": "R19",
+      "pregunta": "¿Con cuánta anticipación tengo que avisar que entra un empleado nuevo?",
+      "respondible": true,
+      "respuesta": "Tenés que avisar sobre la entrada de un empleado nuevo al menos 2 días hábiles antes de que empiece a trabajar, enviando su documento, domicilio y la fecha de ingreso.",
+      "citas": [
+        {
+          "doc": "11-guia-empleadores",
+          "titulo": "Guía para empleadores",
+          "pagina": 2,
+          "fragmento": "Un empleado nuevo se avisa al menos 2 días hábiles antes de que empiece a trabajar, con su documento, domicilio y la fecha de ingreso."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.770770036303104,
+        "contexto": [
+          {
+            "doc": "11-guia-empleadores",
+            "pagina": 2,
+            "seccion": "Altas de empleados",
+            "similitud": 0.770770036303104,
+            "puntaje": 0.8041033696364374
+          },
+          {
+            "doc": "11-guia-empleadores",
+            "pagina": 1,
+            "seccion": "Novedades del mes",
+            "similitud": 0.71488092630392,
+            "puntaje": 0.7315475929705867
+          },
+          {
+            "doc": "11-guia-empleadores",
+            "pagina": 2,
+            "seccion": "Bajas",
+            "similitud": 0.706677556037903,
+            "puntaje": 0.706677556037903
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 3,
+            "seccion": "Cuándo conviene pedir un turno",
+            "similitud": 0.66982889175415,
+            "puntaje": 0.6864955584208167
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 543,
+          "salida": 131
+        },
+        "llamoAlModelo": true,
+        "ms": 2381
+      },
+      "costo": 0.0004931
+    },
+    {
+      "id": "R20",
+      "pregunta": "Si me voy del estudio debiendo honorarios, ¿me entregan igual la documentación?",
+      "respondible": true,
+      "respuesta": "¡Hola! Sí, te entregamos la documentación igual porque no depende de que tengas honorarios impagos. Las deudas se reclaman por separado.",
+      "citas": [
+        {
+          "doc": "12-baja-de-servicio",
+          "titulo": "Baja del servicio y cambio de estudio",
+          "pagina": 2,
+          "fragmento": "La entrega de la documentación no depende de que haya honorarios impagos: la documentación es del cliente."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.809790158563559,
+        "contexto": [
+          {
+            "doc": "12-baja-de-servicio",
+            "pagina": 2,
+            "seccion": "Deudas pendientes",
+            "similitud": 0.809790158563559,
+            "puntaje": 0.8526473014207018
+          },
+          {
+            "doc": "12-baja-de-servicio",
+            "pagina": 1,
+            "seccion": "Qué entrega el estudio",
+            "similitud": 0.76159103145653,
+            "puntaje": 0.7901624600279585
+          },
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 2,
+            "seccion": "Pedidos del cliente",
+            "similitud": 0.737761437892914,
+            "puntaje": 0.7663328664643426
+          },
+          {
+            "doc": "12-baja-de-servicio",
+            "pagina": 1,
+            "seccion": "Cómo pedir la baja",
+            "similitud": 0.732958332719904,
+            "puntaje": 0.7615297612913325
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 539,
+          "salida": 112
+        },
+        "llamoAlModelo": true,
+        "ms": 2444
+      },
+      "costo": 0.0004447
+    },
+    {
+      "id": "N01",
+      "pregunta": "¿Cuál es la alícuota general de IVA?",
+      "respondible": false,
+      "respuesta": "No encuentro eso en los documentos del estudio; lo derivo a un contador.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.632594801938225,
+        "contexto": [
+          {
+            "doc": "03-honorarios",
+            "pagina": 1,
+            "seccion": "Planes mensuales",
+            "similitud": 0.632594801938225,
+            "puntaje": 0.632594801938225
+          },
+          {
+            "doc": "09-guia-sociedades",
+            "pagina": 2,
+            "seccion": "Plan recomendado",
+            "similitud": 0.619748212084069,
+            "puntaje": 0.619748212084069
+          },
+          {
+            "doc": "03-honorarios",
+            "pagina": 1,
+            "seccion": "Valores de referencia",
+            "similitud": 0.605173302313483,
+            "puntaje": 0.605173302313483
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 1,
+            "seccion": "Qué cargar todos los meses",
+            "similitud": 0.593356644711295,
+            "puntaje": 0.593356644711295
+          }
+        ],
+        "motivo": "umbral",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 0,
+          "salida": 0
+        },
+        "llamoAlModelo": false,
+        "ms": 555
+      },
+      "costo": 0.0000013499999999999998
+    },
+    {
+      "id": "N02",
+      "pregunta": "¿Cuál es el tope de facturación de la categoría A del monotributo?",
+      "respondible": false,
+      "respuesta": "No encuentro eso en los documentos del estudio; lo derivo a un contador.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.677902798527647,
+        "contexto": [
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 2,
+            "seccion": "Recategorización",
+            "similitud": 0.677902798527647,
+            "puntaje": 0.7529027985276471
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 2,
+            "seccion": "Control de ingresos",
+            "similitud": 0.661415278911591,
+            "puntaje": 0.736415278911591
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 1,
+            "seccion": "Alcance de esta guía",
+            "similitud": 0.625523135003674,
+            "puntaje": 0.650523135003674
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 3,
+            "seccion": "Errores frecuentes",
+            "similitud": 0.599734973875881,
+            "puntaje": 0.6497349738758811
+          }
+        ],
+        "motivo": "umbral",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 0,
+          "salida": 0
+        },
+        "llamoAlModelo": false,
+        "ms": 502
+      },
+      "costo": 0.0000025499999999999997
+    },
+    {
+      "id": "N03",
+      "pregunta": "¿El estudio hace trámites de sucesiones?",
+      "respondible": false,
+      "respuesta": "No encuentro eso en los documentos del estudio; lo derivo a un contador.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.685029050261648,
+        "contexto": [
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 2,
+            "seccion": "Pedidos del cliente",
+            "similitud": 0.685029050261648,
+            "puntaje": 0.7183623835949813
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 2,
+            "seccion": "¿Atienden los sábados?",
+            "similitud": 0.677978833853568,
+            "puntaje": 0.7113121671869014
+          },
+          {
+            "doc": "02-checklist-alta-cliente",
+            "pagina": 1,
+            "seccion": "Primera reunión",
+            "similitud": 0.666731079427134,
+            "puntaje": 0.7000644127604674
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Horario de atención",
+            "similitud": 0.664349337349813,
+            "puntaje": 0.6976826706831464
+          }
+        ],
+        "motivo": "umbral",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 0,
+          "salida": 0
+        },
+        "llamoAlModelo": false,
+        "ms": 698
+      },
+      "costo": 0.0000015
+    },
+    {
+      "id": "N04",
+      "pregunta": "¿Qué tipo de cambio usan para las facturas en dólares?",
+      "respondible": false,
+      "respuesta": "No encuentro eso en los documentos del estudio; lo derivo a un contador.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.631410761903434,
+        "contexto": [
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 3,
+            "seccion": "¿Puedo pedir una factura del honorario?",
+            "similitud": 0.631410761903434,
+            "puntaje": 0.651410761903434
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 2,
+            "seccion": "¿Puedo cambiar de plan?",
+            "similitud": 0.612603591370154,
+            "puntaje": 0.632603591370154
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 2,
+            "seccion": "Control de ingresos",
+            "similitud": 0.612079762692467,
+            "puntaje": 0.632079762692467
+          },
+          {
+            "doc": "03-honorarios",
+            "pagina": 2,
+            "seccion": "Actualización",
+            "similitud": 0.627828955650334,
+            "puntaje": 0.627828955650334
+          }
+        ],
+        "motivo": "umbral",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 0,
+          "salida": 0
+        },
+        "llamoAlModelo": false,
+        "ms": 426
+      },
+      "costo": 0.0000021000000000000002
+    },
+    {
+      "id": "N05",
+      "pregunta": "¿Cómo se calcula la indemnización por despido de un empleado?",
+      "respondible": false,
+      "respuesta": "No encuentro eso en los documentos del estudio; lo derivo a un contador.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.640960235624321,
+        "contexto": [
+          {
+            "doc": "03-honorarios",
+            "pagina": 1,
+            "seccion": "Valores de referencia",
+            "similitud": 0.635024425538578,
+            "puntaje": 0.660024425538578
+          },
+          {
+            "doc": "11-guia-empleadores",
+            "pagina": 2,
+            "seccion": "Honorario",
+            "similitud": 0.616592425602449,
+            "puntaje": 0.641592425602449
+          },
+          {
+            "doc": "11-guia-empleadores",
+            "pagina": 2,
+            "seccion": "Bajas",
+            "similitud": 0.640960235624321,
+            "puntaje": 0.640960235624321
+          },
+          {
+            "doc": "03-honorarios",
+            "pagina": 2,
+            "seccion": "Trámites fuera del plan",
+            "similitud": 0.609878255114348,
+            "puntaje": 0.634878255114348
+          }
+        ],
+        "motivo": "umbral",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 0,
+          "salida": 0
+        },
+        "llamoAlModelo": false,
+        "ms": 741
+      },
+      "costo": 0.0000024
+    },
+    {
+      "id": "N06",
+      "pregunta": "¿Me pueden ayudar a sacar un crédito hipotecario?",
+      "respondible": false,
+      "respuesta": "No encuentro eso en los documentos del estudio; lo derivo a un contador.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.613438386125517,
+        "contexto": [
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Horario de atención",
+            "similitud": 0.613438386125517,
+            "puntaje": 0.613438386125517
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Cómo pedir un turno",
+            "similitud": 0.609355426392283,
+            "puntaje": 0.609355426392283
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 2,
+            "seccion": "¿Atienden los sábados?",
+            "similitud": 0.606071132602428,
+            "puntaje": 0.606071132602428
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 1,
+            "seccion": "Alcance de esta guía",
+            "similitud": 0.604610627477418,
+            "puntaje": 0.604610627477418
+          }
+        ],
+        "motivo": "umbral",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 0,
+          "salida": 0
+        },
+        "llamoAlModelo": false,
+        "ms": 392
+      },
+      "costo": 0.00000195
+    },
+    {
+      "id": "N07",
+      "pregunta": "¿Cuál es el CUIT del estudio?",
+      "respondible": false,
+      "respuesta": "No encuentro eso en los documentos del estudio; lo derivo a un contador.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.701921463012695,
+        "contexto": [
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 2,
+            "seccion": "WhatsApp",
+            "similitud": 0.701921463012695,
+            "puntaje": 0.751921463012695
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 3,
+            "seccion": "¿Dónde está el estudio?",
+            "similitud": 0.69991197287774,
+            "puntaje": 0.74991197287774
+          },
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 2,
+            "seccion": "Qué nunca pedimos",
+            "similitud": 0.69916955823717,
+            "puntaje": 0.74916955823717
+          },
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 1,
+            "seccion": "Qué datos guarda el estudio",
+            "similitud": 0.696191430091858,
+            "puntaje": 0.7461914300918581
+          }
+        ],
+        "motivo": "modelo",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 529,
+          "salida": 35
+        },
+        "llamoAlModelo": true,
+        "ms": 1657
+      },
+      "costo": 0.00024739999999999994
+    },
+    {
+      "id": "N08",
+      "pregunta": "¿Quién ganó el último mundial de fútbol?",
+      "respondible": false,
+      "respuesta": "No encuentro eso en los documentos del estudio; lo derivo a un contador.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.53342333635231,
+        "contexto": [
+          {
+            "doc": "03-honorarios",
+            "pagina": 2,
+            "seccion": "Forma de pago",
+            "similitud": 0.53342333635231,
+            "puntaje": 0.53342333635231
+          },
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 2,
+            "seccion": "Qué nunca pedimos",
+            "similitud": 0.532487185745669,
+            "puntaje": 0.532487185745669
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 2,
+            "seccion": "¿El estudio me avisa cuándo pagar?",
+            "similitud": 0.525387585163116,
+            "puntaje": 0.525387585163116
+          },
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 2,
+            "seccion": "WhatsApp",
+            "similitud": 0.525075197219849,
+            "puntaje": 0.525075197219849
+          }
+        ],
+        "motivo": "umbral",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 0,
+          "salida": 0
+        },
+        "llamoAlModelo": false,
+        "ms": 616
+      },
+      "costo": 0.0000015
+    },
+    {
+      "id": "N09",
+      "pregunta": "¿Tienen una sucursal en Córdoba?",
+      "respondible": false,
+      "respuesta": "No encuentro eso en los documentos del estudio; lo derivo a un contador.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.627245921708522,
+        "contexto": [
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 3,
+            "seccion": "¿Dónde está el estudio?",
+            "similitud": 0.627245921708522,
+            "puntaje": 0.627245921708522
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 2,
+            "seccion": "¿Atienden los sábados?",
+            "similitud": 0.614237427711487,
+            "puntaje": 0.614237427711487
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 2,
+            "seccion": "Quién atiende",
+            "similitud": 0.611806677364511,
+            "puntaje": 0.611806677364511
+          },
+          {
+            "doc": "03-honorarios",
+            "pagina": 2,
+            "seccion": "Trámites fuera del plan",
+            "similitud": 0.611522908048892,
+            "puntaje": 0.611522908048892
+          }
+        ],
+        "motivo": "umbral",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 0,
+          "salida": 0
+        },
+        "llamoAlModelo": false,
+        "ms": 485
+      },
+      "costo": 0.0000012
+    },
+    {
+      "id": "N10",
+      "pregunta": "¿Qué sistema contable usa el estudio para llevar los libros?",
+      "respondible": false,
+      "respuesta": "No encuentro eso en los documentos del estudio; lo derivo a un contador.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.728464186191559,
+        "contexto": [
+          {
+            "doc": "09-guia-sociedades",
+            "pagina": 1,
+            "seccion": "Libros",
+            "similitud": 0.728464186191559,
+            "puntaje": 0.7617975195248923
+          },
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 1,
+            "seccion": "Qué datos guarda el estudio",
+            "similitud": 0.703234016895294,
+            "puntaje": 0.7199006835619607
+          },
+          {
+            "doc": "09-guia-sociedades",
+            "pagina": 2,
+            "seccion": "Cuenta bancaria",
+            "similitud": 0.698799630963792,
+            "puntaje": 0.7154662976304588
+          },
+          {
+            "doc": "02-checklist-alta-cliente",
+            "pagina": 2,
+            "seccion": "Carpeta compartida",
+            "similitud": 0.69489327730021,
+            "puntaje": 0.7115599439668767
+          }
+        ],
+        "motivo": "modelo",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 523,
+          "salida": 36
+        },
+        "llamoAlModelo": true,
+        "ms": 1624
+      },
+      "costo": 0.00024914999999999996
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "descripcion": "15 preguntas en inglés sobre los mismos documentos (en español): 10 respondibles, traducción de preguntas del set principal con el mismo documento y página esperados, y 5 trampas. Mide la versión en inglés del asistente. Corpus y preguntas ficticios.",
+  "preguntas": [
+    { "id": "E01", "pregunta": "By what day of the month do I have to send last month's receipts?", "esperado": [{ "doc": "01-calendario-vencimientos-internos", "pagina": 1 }, { "doc": "06-preguntas-frecuentes", "pagina": 1 }] },
+    { "id": "E04", "pregunta": "How long is the first onboarding meeting, and is there a fee?", "esperado": [{ "doc": "02-checklist-alta-cliente", "pagina": 1 }] },
+    { "id": "E06", "pregunta": "How often do you update your fees?", "esperado": [{ "doc": "03-honorarios", "pagina": 2 }] },
+    { "id": "E08", "pregunta": "How much does an income certification cost?", "esperado": [{ "doc": "03-honorarios", "pagina": 2 }] },
+    { "id": "E09", "pregunta": "How far in advance can I cancel an appointment at no cost?", "esperado": [{ "doc": "04-politica-turnos", "pagina": 2 }] },
+    { "id": "E12", "pregunta": "Can I send my invoices over WhatsApp?", "esperado": [{ "doc": "06-preguntas-frecuentes", "pagina": 1 }, { "doc": "08-canales-de-comunicacion", "pagina": 2 }] },
+    { "id": "E14", "pregunta": "Where is the firm's office?", "esperado": [{ "doc": "06-preguntas-frecuentes", "pagina": 3 }] },
+    { "id": "E16", "pregunta": "How long do you take to answer emails?", "esperado": [{ "doc": "08-canales-de-comunicacion", "pagina": 1 }] },
+    { "id": "E18", "pregunta": "How many years do you keep my documents?", "esperado": [{ "doc": "10-confidencialidad-datos", "pagina": 2 }] },
+    { "id": "E20", "pregunta": "If I leave the firm while still owing fees, do I still get my documents back?", "esperado": [{ "doc": "12-baja-de-servicio", "pagina": 2 }] },
+    { "id": "EN01", "pregunta": "What is the standard VAT rate?", "esperado": [] },
+    { "id": "EN03", "pregunta": "Does the firm handle probate and inheritance cases?", "esperado": [] },
+    { "id": "EN07", "pregunta": "What is the firm's tax ID number?", "esperado": [] },
+    { "id": "EN08", "pregunta": "Who won the last football World Cup?", "esperado": [] },
+    { "id": "EN10", "pregunta": "Which accounting software does the firm use for the books?", "esperado": [] }
+  ]
+}

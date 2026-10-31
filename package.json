@@ -1,0 +1,53 @@
+{
+  "name": "fojas",
+  "version": "0.1.0",
+  "private": true,
+  "description": "RAG assistant with citations for a fictional accounting firm (demo project, fictional documents).",
+  "license": "MIT",
+  "scripts": {
+    "predev": "node scripts/copiar-worker-pdf.mjs",
+    "dev": "next dev -p 3203",
+    "prebuild": "node scripts/copiar-worker-pdf.mjs",
+    "build": "next build",
+    "start": "next start -p 3203",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "corpus:pdf": "tsx scripts/generar-pdfs.ts",
+    "ingestar": "tsx scripts/ingestar.ts",
+    "check-env": "node scripts/check-env.mjs",
+    "modelos": "node scripts/modelos-embeddings.mjs",
+    "eval": "tsx scripts/eval.ts",
+    "lighthouse": "node scripts/lighthouse.mjs",
+    "storage:preparar": "tsx scripts/preparar-storage.ts",
+    "admin:crear": "tsx scripts/crear-admin-demo.ts",
+    "capturas": "tsx scripts/capturas.ts"
+  },
+  "dependencies": {
+    "next": "16.4.3",
+    "pdfjs-dist": "^5.7.284",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "server-only": "^0.0.1",
+    "unpdf": "^2.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
+    "@secretlint/secretlint-rule-preset-recommend": "^9.3.4",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.4.3",
+    "lighthouse": "^12.8.2",
+    "secretlint": "^9.3.4",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}

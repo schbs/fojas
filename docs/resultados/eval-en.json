@@ -1,0 +1,909 @@
+{
+  "fecha": "2026-10-31T19:00:54.415Z",
+  "almacen": "Supabase",
+  "modelo": "gemini-3.5-flash-lite (con caché)",
+  "prompt": "v1",
+  "idioma": "en",
+  "config": {},
+  "conCache": false,
+  "tabla": [
+    [
+      "Exactitud de cita (documento + página), 10 respondibles",
+      "10/10 = 100 %",
+      "≥ 85 %"
+    ],
+    [
+      "\"No sé\" correcto, 5 no respondibles",
+      "5/5 = 100 %",
+      "≥ 90 %"
+    ],
+    [
+      "Alucinaciones (respuesta sin cita válida)",
+      "0",
+      "0"
+    ],
+    [
+      "No respondibles que se respondieron igual",
+      "0",
+      "—"
+    ],
+    [
+      "Respondibles con \"no sé\"",
+      "0",
+      "—"
+    ],
+    [
+      "Citas del modelo descartadas por el validador",
+      "0",
+      "—"
+    ],
+    [
+      "Latencia p50 / p95",
+      "1.7 s / 6.4 s",
+      "—"
+    ],
+    [
+      "Costo estimado por pregunta (plan pago)",
+      "USD 0.00031",
+      "—"
+    ]
+  ],
+  "filas": [
+    {
+      "id": "E01",
+      "pregunta": "By what day of the month do I have to send last month's receipts?",
+      "respondible": true,
+      "respuesta": "You need to send last month's receipts by the 5th of each month.",
+      "citas": [
+        {
+          "doc": "01-calendario-vencimientos-internos",
+          "titulo": "Calendario de vencimientos internos",
+          "pagina": 1,
+          "fragmento": "El estudio recibe los comprobantes de ventas y compras del mes anterior hasta el día 5 de cada mes."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.714480348949349,
+        "contexto": [
+          {
+            "doc": "01-calendario-vencimientos-internos",
+            "pagina": 1,
+            "seccion": "Recepción mensual de comprobantes",
+            "similitud": 0.714480348949349,
+            "puntaje": 0.714480348949349
+          },
+          {
+            "doc": "11-guia-empleadores",
+            "pagina": 1,
+            "seccion": "Entrega de recibos",
+            "similitud": 0.685675062456724,
+            "puntaje": 0.685675062456724
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 1,
+            "seccion": "Qué cargar todos los meses",
+            "similitud": 0.682981648089694,
+            "puntaje": 0.682981648089694
+          },
+          {
+            "doc": "11-guia-empleadores",
+            "pagina": 1,
+            "seccion": "Novedades del mes",
+            "similitud": 0.668642481050354,
+            "puntaje": 0.668642481050354
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 699,
+          "salida": 100
+        },
+        "llamoAlModelo": true,
+        "ms": 2301
+      },
+      "costo": 0.00046225
+    },
+    {
+      "id": "E04",
+      "pregunta": "How long is the first onboarding meeting, and is there a fee?",
+      "respondible": true,
+      "respuesta": "The first onboarding meeting lasts 45 minutes and is completely free of charge. During this meeting, the studio explains the fee plans, requests initial documentation, and agrees on the start date of the service.",
+      "citas": [
+        {
+          "doc": "02-checklist-alta-cliente",
+          "titulo": "Checklist de alta de cliente",
+          "pagina": 1,
+          "fragmento": "Toda alta empieza con una reunión de 45 minutos, presencial o por videollamada, sin costo."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.714956330501487,
+        "contexto": [
+          {
+            "doc": "02-checklist-alta-cliente",
+            "pagina": 1,
+            "seccion": "Primera reunión",
+            "similitud": 0.714956330501487,
+            "puntaje": 0.714956330501487
+          },
+          {
+            "doc": "07-circular-cierre-anual",
+            "pagina": 2,
+            "seccion": "Honorario del cierre",
+            "similitud": 0.62480954079685,
+            "puntaje": 0.62480954079685
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 2,
+            "seccion": "Cancelaciones",
+            "similitud": 0.624663963873859,
+            "puntaje": 0.624663963873859
+          },
+          {
+            "doc": "02-checklist-alta-cliente",
+            "pagina": 2,
+            "seccion": "Carta de servicios",
+            "similitud": 0.617973566055302,
+            "puntaje": 0.617973566055302
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 580,
+          "salida": 126
+        },
+        "llamoAlModelo": true,
+        "ms": 1919
+      },
+      "costo": 0.0004913999999999999
+    },
+    {
+      "id": "E06",
+      "pregunta": "How often do you update your fees?",
+      "respondible": true,
+      "respuesta": "We update our fees every 4 months, specifically in March, July, and November, and we notify you by email 30 days in advance.",
+      "citas": [
+        {
+          "doc": "03-honorarios",
+          "titulo": "Circular de honorarios 2026",
+          "pagina": 2,
+          "fragmento": "Los honorarios se actualizan cada 4 meses (en marzo, julio y noviembre). El estudio avisa\npor correo con 30 días de anticipación."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.746322616715589,
+        "contexto": [
+          {
+            "doc": "03-honorarios",
+            "pagina": 2,
+            "seccion": "Actualización",
+            "similitud": 0.746322616715589,
+            "puntaje": 0.746322616715589
+          },
+          {
+            "doc": "07-circular-cierre-anual",
+            "pagina": 2,
+            "seccion": "Honorario del cierre",
+            "similitud": 0.649884104728699,
+            "puntaje": 0.649884104728699
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 3,
+            "seccion": "¿Puedo pedir una factura del honorario?",
+            "similitud": 0.648780903292842,
+            "puntaje": 0.648780903292842
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 2,
+            "seccion": "Control de ingresos",
+            "similitud": 0.63498866558075,
+            "puntaje": 0.63498866558075
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 566,
+          "salida": 102
+        },
+        "llamoAlModelo": true,
+        "ms": 1647
+      },
+      "costo": 0.00042615
+    },
+    {
+      "id": "E08",
+      "pregunta": "How much does an income certification cost?",
+      "respondible": true,
+      "respuesta": "An income certification costs ARS 52.000.",
+      "citas": [
+        {
+          "doc": "03-honorarios",
+          "titulo": "Circular de honorarios 2026",
+          "pagina": 2,
+          "fragmento": "Certificación de ingresos: ARS 52.000."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.706249959394328,
+        "contexto": [
+          {
+            "doc": "03-honorarios",
+            "pagina": 2,
+            "seccion": "Trámites fuera del plan",
+            "similitud": 0.706249959394328,
+            "puntaje": 0.7229166260609947
+          },
+          {
+            "doc": "07-circular-cierre-anual",
+            "pagina": 2,
+            "seccion": "Honorario del cierre",
+            "similitud": 0.615263219052247,
+            "puntaje": 0.6319298857189137
+          },
+          {
+            "doc": "11-guia-empleadores",
+            "pagina": 2,
+            "seccion": "Honorario",
+            "similitud": 0.622363980623842,
+            "puntaje": 0.622363980623842
+          },
+          {
+            "doc": "03-honorarios",
+            "pagina": 1,
+            "seccion": "Valores de referencia",
+            "similitud": 0.620662722090293,
+            "puntaje": 0.620662722090293
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 588,
+          "salida": 89
+        },
+        "llamoAlModelo": true,
+        "ms": 2462
+      },
+      "costo": 0.00040055
+    },
+    {
+      "id": "E09",
+      "pregunta": "How far in advance can I cancel an appointment at no cost?",
+      "respondible": true,
+      "respuesta": "You can cancel or change an appointment at no cost up to 24 hours in advance.",
+      "citas": [
+        {
+          "doc": "04-politica-turnos",
+          "titulo": "Política de turnos y atención",
+          "pagina": 2,
+          "fragmento": "Un turno se puede cancelar o cambiar sin costo hasta 24 horas antes."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.724542227332858,
+        "contexto": [
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 2,
+            "seccion": "Cancelaciones",
+            "similitud": 0.724542227332858,
+            "puntaje": 0.724542227332858
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 2,
+            "seccion": "Llegadas tarde",
+            "similitud": 0.628815528346497,
+            "puntaje": 0.628815528346497
+          },
+          {
+            "doc": "12-baja-de-servicio",
+            "pagina": 1,
+            "seccion": "Cómo pedir la baja",
+            "similitud": 0.626180768013005,
+            "puntaje": 0.626180768013005
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Turnos por videollamada",
+            "similitud": 0.615699603044939,
+            "puntaje": 0.615699603044939
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 539,
+          "salida": 95
+        },
+        "llamoAlModelo": true,
+        "ms": 1700
+      },
+      "costo": 0.00040145
+    },
+    {
+      "id": "E12",
+      "pregunta": "Can I send my invoices over WhatsApp?",
+      "respondible": true,
+      "respuesta": "No, you cannot send your invoices over WhatsApp. All documents must be uploaded to the shared folder, as WhatsApp is only used for notices.",
+      "citas": [
+        {
+          "doc": "06-preguntas-frecuentes",
+          "titulo": "Preguntas frecuentes de clientes",
+          "pagina": 1,
+          "fragmento": "No. Los comprobantes van siempre a la carpeta compartida."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.704285916302875,
+        "contexto": [
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 1,
+            "seccion": "¿Puedo mandar los comprobantes por WhatsApp?",
+            "similitud": 0.704285916302875,
+            "puntaje": 0.724285916302875
+          },
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 2,
+            "seccion": "WhatsApp",
+            "similitud": 0.645875138536084,
+            "puntaje": 0.665875138536084
+          },
+          {
+            "doc": "09-guia-sociedades",
+            "pagina": 2,
+            "seccion": "Plan recomendado",
+            "similitud": 0.592940557844577,
+            "puntaje": 0.592940557844577
+          },
+          {
+            "doc": "05-guia-monotributistas",
+            "pagina": 1,
+            "seccion": "Qué cargar todos los meses",
+            "similitud": 0.591640640301632,
+            "puntaje": 0.591640640301632
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 591,
+          "salida": 77
+        },
+        "llamoAlModelo": true,
+        "ms": 1659
+      },
+      "costo": 0.0003712999999999999
+    },
+    {
+      "id": "E14",
+      "pregunta": "Where is the firm's office?",
+      "respondible": true,
+      "respuesta": "The firm's office is located at Los Aromos 455, first floor, office B.",
+      "citas": [
+        {
+          "doc": "06-preguntas-frecuentes",
+          "titulo": "Preguntas frecuentes de clientes",
+          "pagina": 3,
+          "fragmento": "En calle Los Aromos 455, primer piso, oficina B (dirección ficticia)."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.678864439692034,
+        "contexto": [
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 3,
+            "seccion": "¿Dónde está el estudio?",
+            "similitud": 0.678864439692034,
+            "puntaje": 0.678864439692034
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 2,
+            "seccion": "¿Atienden los sábados?",
+            "similitud": 0.649477899074554,
+            "puntaje": 0.649477899074554
+          },
+          {
+            "doc": "02-checklist-alta-cliente",
+            "pagina": 1,
+            "seccion": "Primera reunión",
+            "similitud": 0.638392326688083,
+            "puntaje": 0.638392326688083
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Cómo pedir un turno",
+            "similitud": 0.635979552149164,
+            "puntaje": 0.635979552149164
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 579,
+          "salida": 103
+        },
+        "llamoAlModelo": true,
+        "ms": 1867
+      },
+      "costo": 0.00043224999999999996
+    },
+    {
+      "id": "E16",
+      "pregunta": "How long do you take to answer emails?",
+      "respondible": true,
+      "respuesta": "We answer emails within 48 business hours. Urgent requests are answered on the same day if they arrive before 1 p.m.",
+      "citas": [
+        {
+          "doc": "08-canales-de-comunicacion",
+          "titulo": "Política de canales de comunicación",
+          "pagina": 1,
+          "fragmento": "El estudio responde los correos dentro de las 48 horas hábiles."
+        },
+        {
+          "doc": "08-canales-de-comunicacion",
+          "titulo": "Política de canales de comunicación",
+          "pagina": 1,
+          "fragmento": "Los pedidos marcados\ncomo “URGENTE” se responden en el día si llegan antes de las 13 h."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.680468380451202,
+        "contexto": [
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 1,
+            "seccion": "Tiempos de respuesta",
+            "similitud": 0.680468380451202,
+            "puntaje": 0.680468380451202
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Cómo pedir un turno",
+            "similitud": 0.604001063227685,
+            "puntaje": 0.604001063227685
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Horario de atención",
+            "similitud": 0.596372902393341,
+            "puntaje": 0.596372902393341
+          },
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 2,
+            "seccion": "Pedidos del cliente",
+            "similitud": 0.590959429740906,
+            "puntaje": 0.590959429740906
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 596,
+          "salida": 153
+        },
+        "llamoAlModelo": true,
+        "ms": 2548
+      },
+      "costo": 0.0005627999999999999
+    },
+    {
+      "id": "E18",
+      "pregunta": "How many years do you keep my documents?",
+      "respondible": true,
+      "respuesta": "We keep your documents for 10 years from the last working fiscal year, unless you request to keep them longer.",
+      "citas": [
+        {
+          "doc": "10-confidencialidad-datos",
+          "titulo": "Política de confidencialidad y datos",
+          "pagina": 2,
+          "fragmento": "La documentación se guarda 10 años desde el último ejercicio trabajado. Después se elimina, salvo que el cliente pida conservarla."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.76802709007344,
+        "contexto": [
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 2,
+            "seccion": "Cuánto tiempo se guardan",
+            "similitud": 0.76802709007344,
+            "puntaje": 0.7846937567401068
+          },
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 1,
+            "seccion": "Qué datos guarda el estudio",
+            "similitud": 0.669586678433022,
+            "puntaje": 0.6862533450996887
+          },
+          {
+            "doc": "12-baja-de-servicio",
+            "pagina": 2,
+            "seccion": "Deudas pendientes",
+            "similitud": 0.663873235218122,
+            "puntaje": 0.6805399018847887
+          },
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 2,
+            "seccion": "Pedidos del cliente",
+            "similitud": 0.649378557484703,
+            "puntaje": 0.6660452241513697
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 539,
+          "salida": 87
+        },
+        "llamoAlModelo": true,
+        "ms": 6388
+      },
+      "costo": 0.0003807
+    },
+    {
+      "id": "E20",
+      "pregunta": "If I leave the firm while still owing fees, do I still get my documents back?",
+      "respondible": true,
+      "respuesta": "Yes, you will still get your documents back because handing over documentation does not depend on having unpaid fees.",
+      "citas": [
+        {
+          "doc": "12-baja-de-servicio",
+          "titulo": "Baja del servicio y cambio de estudio",
+          "pagina": 2,
+          "fragmento": "La entrega de la documentación no depende de que haya honorarios impagos: la documentación es del cliente."
+        }
+      ],
+      "confianza": "alta",
+      "sin_evidencia": false,
+      "citaCorrecta": true,
+      "traza": {
+        "maxSimilitud": 0.756380103718642,
+        "contexto": [
+          {
+            "doc": "12-baja-de-servicio",
+            "pagina": 2,
+            "seccion": "Deudas pendientes",
+            "similitud": 0.756380103718642,
+            "puntaje": 0.766380103718642
+          },
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 2,
+            "seccion": "Pedidos del cliente",
+            "similitud": 0.656976401805878,
+            "puntaje": 0.666976401805878
+          },
+          {
+            "doc": "12-baja-de-servicio",
+            "pagina": 2,
+            "seccion": "Revocación de accesos",
+            "similitud": 0.666911244392395,
+            "puntaje": 0.666911244392395
+          },
+          {
+            "doc": "12-baja-de-servicio",
+            "pagina": 1,
+            "seccion": "Qué entrega el estudio",
+            "similitud": 0.666330655435882,
+            "puntaje": 0.666330655435882
+          }
+        ],
+        "motivo": null,
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 562,
+          "salida": 102
+        },
+        "llamoAlModelo": true,
+        "ms": 1950
+      },
+      "costo": 0.0004266
+    },
+    {
+      "id": "EN01",
+      "pregunta": "What is the standard VAT rate?",
+      "respondible": false,
+      "respuesta": "I can't find that in the firm's documents; I'm passing your question to an accountant.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.555771470069885,
+        "contexto": [
+          {
+            "doc": "09-guia-sociedades",
+            "pagina": 2,
+            "seccion": "Plan recomendado",
+            "similitud": 0.555771470069885,
+            "puntaje": 0.555771470069885
+          },
+          {
+            "doc": "03-honorarios",
+            "pagina": 1,
+            "seccion": "Planes mensuales",
+            "similitud": 0.544773757457733,
+            "puntaje": 0.544773757457733
+          },
+          {
+            "doc": "03-honorarios",
+            "pagina": 2,
+            "seccion": "Actualización",
+            "similitud": 0.534426661397617,
+            "puntaje": 0.534426661397617
+          },
+          {
+            "doc": "07-circular-cierre-anual",
+            "pagina": 1,
+            "seccion": "A quién va dirigida",
+            "similitud": 0.533136936017093,
+            "puntaje": 0.533136936017093
+          }
+        ],
+        "motivo": "umbral",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 0,
+          "salida": 0
+        },
+        "llamoAlModelo": false,
+        "ms": 686
+      },
+      "costo": 0.0000012
+    },
+    {
+      "id": "EN03",
+      "pregunta": "Does the firm handle probate and inheritance cases?",
+      "respondible": false,
+      "respuesta": "I can't find that in the firm's documents; I'm passing your question to an accountant.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.581755928554173,
+        "contexto": [
+          {
+            "doc": "02-checklist-alta-cliente",
+            "pagina": 1,
+            "seccion": "Primera reunión",
+            "similitud": 0.581755928554173,
+            "puntaje": 0.581755928554173
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 3,
+            "seccion": "¿Puedo pedir una factura del honorario?",
+            "similitud": 0.576913083975728,
+            "puntaje": 0.576913083975728
+          },
+          {
+            "doc": "04-politica-turnos",
+            "pagina": 1,
+            "seccion": "Horario de atención",
+            "similitud": 0.575275540351868,
+            "puntaje": 0.575275540351868
+          },
+          {
+            "doc": "06-preguntas-frecuentes",
+            "pagina": 2,
+            "seccion": "¿Atienden los sábados?",
+            "similitud": 0.574087977409363,
+            "puntaje": 0.574087977409363
+          }
+        ],
+        "motivo": "umbral",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 0,
+          "salida": 0
+        },
+        "llamoAlModelo": false,
+        "ms": 1279
+      },
+      "costo": 0.00000195
+    },
+    {
+      "id": "EN07",
+      "pregunta": "What is the firm's tax ID number?",
+      "respondible": false,
+      "respuesta": "I can't find that in the firm's documents; I'm passing your question to an accountant.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.606823885034092,
+        "contexto": [
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 1,
+            "seccion": "Qué datos guarda el estudio",
+            "similitud": 0.606823885034092,
+            "puntaje": 0.606823885034092
+          },
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 2,
+            "seccion": "Qué nunca pedimos",
+            "similitud": 0.595466613769535,
+            "puntaje": 0.595466613769535
+          },
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 2,
+            "seccion": "WhatsApp",
+            "similitud": 0.594326579908934,
+            "puntaje": 0.594326579908934
+          },
+          {
+            "doc": "02-checklist-alta-cliente",
+            "pagina": 1,
+            "seccion": "Documentación inicial de personas humanas",
+            "similitud": 0.588121081106599,
+            "puntaje": 0.588121081106599
+          }
+        ],
+        "motivo": "umbral",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 0,
+          "salida": 0
+        },
+        "llamoAlModelo": false,
+        "ms": 513
+      },
+      "costo": 0.0000013499999999999998
+    },
+    {
+      "id": "EN08",
+      "pregunta": "Who won the last football World Cup?",
+      "respondible": false,
+      "respuesta": "I can't find that in the firm's documents; I'm passing your question to an accountant.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.506465911865238,
+        "contexto": [
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 2,
+            "seccion": "Qué nunca pedimos",
+            "similitud": 0.506465911865238,
+            "puntaje": 0.506465911865238
+          },
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 1,
+            "seccion": "Tiempos de respuesta",
+            "similitud": 0.498637825331818,
+            "puntaje": 0.498637825331818
+          },
+          {
+            "doc": "08-canales-de-comunicacion",
+            "pagina": 2,
+            "seccion": "WhatsApp",
+            "similitud": 0.496318370323279,
+            "puntaje": 0.496318370323279
+          },
+          {
+            "doc": "03-honorarios",
+            "pagina": 2,
+            "seccion": "Forma de pago",
+            "similitud": 0.491600215435032,
+            "puntaje": 0.491600215435032
+          }
+        ],
+        "motivo": "umbral",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 0,
+          "salida": 0
+        },
+        "llamoAlModelo": false,
+        "ms": 630
+      },
+      "costo": 0.0000013499999999999998
+    },
+    {
+      "id": "EN10",
+      "pregunta": "Which accounting software does the firm use for the books?",
+      "respondible": false,
+      "respuesta": "I can't find that in the firm's documents; I'm passing your question to an accountant.",
+      "citas": [],
+      "confianza": "baja",
+      "sin_evidencia": true,
+      "citaCorrecta": false,
+      "traza": {
+        "maxSimilitud": 0.682186782360077,
+        "contexto": [
+          {
+            "doc": "09-guia-sociedades",
+            "pagina": 1,
+            "seccion": "Libros",
+            "similitud": 0.682186782360077,
+            "puntaje": 0.682186782360077
+          },
+          {
+            "doc": "02-checklist-alta-cliente",
+            "pagina": 2,
+            "seccion": "Carpeta compartida",
+            "similitud": 0.642162604074172,
+            "puntaje": 0.642162604074172
+          },
+          {
+            "doc": "09-guia-sociedades",
+            "pagina": 2,
+            "seccion": "Cuenta bancaria",
+            "similitud": 0.639796156877165,
+            "puntaje": 0.639796156877165
+          },
+          {
+            "doc": "10-confidencialidad-datos",
+            "pagina": 1,
+            "seccion": "Dónde se guardan",
+            "similitud": 0.629890918731689,
+            "puntaje": 0.629890918731689
+          }
+        ],
+        "motivo": "modelo",
+        "citasDescartadas": 0,
+        "uso": {
+          "entrada": 567,
+          "salida": 36
+        },
+        "llamoAlModelo": true,
+        "ms": 1610
+      },
+      "costo": 0.00026235
+    }
+  ]
+}
