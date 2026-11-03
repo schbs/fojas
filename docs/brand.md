@@ -30,7 +30,7 @@ contraste AA.
 
 | Proyecto | Display | Hue (≥ 30°) | Layout | Movimiento | Forma | Difiere en |
 |---|---|---|---|---|---|---|
-| PROPUESTA RED INMOBILIARIA | ✓ Montserrat vs Newsreader | ✓ 25° vs 235° | ✓ | ✓ | ✓ | 5/5 |
-| PROPUESTA REY AUTOMOTOR | ✓ | ✓ 275° vs 235° (40°) | ✓ | ✓ | ✓ | 5/5 |
+| Propuesta inmobiliaria (no contratada) | ✓ Montserrat vs Newsreader | ✓ 25° vs 235° | ✓ | ✓ | ✓ | 5/5 |
+| Propuesta concesionaria (no contratada) | ✓ | ✓ 275° vs 235° (40°) | ✓ | ✓ | ✓ | 5/5 |
 | turnolisto | ✓ Lexend vs Newsreader | ✓ 188° vs 235° (47°) | ✓ | ✓ | ✓ radios grandes vs sin radios | 5/5 |
 | embudo | ✓ Space Grotesk vs Newsreader | ✓ 150° vs 235° (85°) | ✓ grilla densa vs columna + margen | ✓ barras vs resaltado | ✓ | 5/5 |
